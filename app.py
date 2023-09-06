@@ -29,7 +29,7 @@ def predict():
                              unit_price, weight, dosage_numerical]])
 
    result = model.predict(input_query)[0]
-   return jsonify(result)
+   return jsonify({"Prediction": result})
 
 if __name__ == '__main__':
     app.run(debug=True)
